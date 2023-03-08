@@ -19,12 +19,12 @@ export class Car {
       <div class="card elevation-2">
         <img
           src="${this.img}"
-          alt="${this.make}-${this.model}">
+          alt="${this.make}-${this.model}" class="rounded">
         <div class="p-2">
           <h5 class="text-center border-bottom border-dark">${this.make} | ${this.model} | ${this.year}</h5>
           <div class="color px-5 rounded" style="background: ${this.color}" >🎨</div>
           <p>${this.description}</p>
-          <p class="text-end">🍔${this.price}</p>
+          <p class="text-end">$${this.price}</p>
           <button class="btn btn-outline-danger" title="delete listing" onclick="app.carsController.deleteCar('${this.id}')"><i class="mdi mdi-delete" ></i></button>
         </div>
       </div>
@@ -48,7 +48,7 @@ export class Car {
     </div>
     <div class="mb-2 col-4">
       <label for="year">Year</label>
-      <input type="number" name="year" id="year" class="form-control" required min="2020" max="3000"
+      <input type="number" name="year" id="year" class="form-control" required min="1950" max="2023"
         value="2023">
     </div>
     <div class="mb-2 col-12">
