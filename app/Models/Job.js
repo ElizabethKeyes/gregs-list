@@ -47,7 +47,7 @@ export class Job {
       <input type="text" name="description" id="description" class="form-control" required>
     </div>
     <div class="col-12 mt-2 text-end">
-      <button class="btn" type="button">Cancel</button>
+      <button class="btn" type="reset">Cancel</button>
       <button class="btn btn-primary">Submit</button>
     </div>
   </form>

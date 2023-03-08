@@ -2,6 +2,7 @@ import { appState } from "../AppState.js";
 import { Job } from "../Models/Job.js";
 import { jobsService } from "../Services/JobsService.js";
 import { getFormData } from "../Utils/FormHandler.js";
+import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
 
 
@@ -37,8 +38,9 @@ export class JobsController {
     form.reset()
   }
 
-  deleteJob(id) {
-    jobsService.deleteJob(id)
+  async deleteJob(id) {
+    if (await Pop.confirm("Are you sure you want to remove this posting?"))
+      jobsService.deleteJob(id)
   }
 
 }

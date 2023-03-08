@@ -69,7 +69,7 @@ export class Car {
       <input type="number" name="price" id="price" class="form-control" required min="1">
     </div>
     <div class="text-end mt-2">
-      <button class="btn" type="button">cancel</button>
+      <button class="btn" type="reset">cancel</button>
       <button class="btn btn-primary" type="submit">submit</button>
     </div>
   </form>`

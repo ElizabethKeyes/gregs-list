@@ -38,7 +38,6 @@ export class CarsController {
     console.log('creating a car')
     const form = event.target // the target is the element that triggered this function
     console.log(form);
-    console.log(form.make.value, form.model.value, form.color.value); // how to grab data from a form
     // NOTE your form inputs must contain names, that match these 'make model color' and value is what gets the users inputed data
     // const formData= {
     //   make: form.make.value,
@@ -48,6 +47,7 @@ export class CarsController {
     let formData = getFormData(form) // when passing in a form element, will extract the inputs and assemble into a POJO 
     console.log(formData);
     carsService.createCar(formData)
+    // @ts-ignore
     form.reset() // this show an error cause js doesn't know that event.target is coming from a form (it could come from any element in theory)
   }
 
@@ -56,7 +56,7 @@ export class CarsController {
     //   console.log('delete car', id);
     //   carsService.deleteCar(id)
     // }
-    if (await Pop.confirm('are you sure you want to delete this?')) {
+    if (await Pop.confirm('Are you sure you want to delete this listing?')) {
       console.log('delete car', id);
       carsService.deleteCar(id)
       Pop.toast('car deleted!', 'success')
