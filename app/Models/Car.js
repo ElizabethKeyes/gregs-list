@@ -21,7 +21,7 @@ export class Car {
           src="${this.img}"
           alt="${this.make}-${this.model}" class="my-card-imgs">
         <div class="p-2">
-          <h5 class="text-center border-bottom border-dark">${this.make} | ${this.model} | ${this.year}</h5>
+          <h5 class="text-center border-bottom border-dark pb-2">${this.make} | ${this.model} | ${this.year}</h5>
           <div class="color px-5 rounded" style="background: ${this.color}" >🎨</div>
           <p>${this.description}</p>
           <p class="text-end">$${this.price}</p>

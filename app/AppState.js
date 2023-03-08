@@ -1,5 +1,6 @@
 import { Car } from "./Models/Car.js"
 import { House } from "./Models/House.js"
+import { Job } from "./Models/Job.js"
 import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -43,6 +44,26 @@ class AppState extends EventEmitter {
   //   })
   // ]
   //#endregion
+
+  /** @type {import('./Models/Job').Job[]} */
+  jobs = loadState('jobs', [Job])
+  //#region (hard coded jobs)
+  // jobs = [
+  //   new Job({
+  //     title: 'Dog Walker',
+  //     location: 'Boise',
+  //     description: 'Walk the dogs',
+  //     imgURL: 'https://images.unsplash.com/photo-1530700131180-d43d9b8cc41f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2334&q=80'
+  //   }),
+  //   new Job({
+  //     title: 'Cook',
+  //     location: 'Meridian',
+  //     description: "Make things, hopefully they're edible",
+  //     imgURL: 'https://images.unsplash.com/photo-1564844536308-50b114a1d946?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1988&q=80'
+  //   })
+  // ]
+  //#endregion
+
 
   // NOTE super weird type case as an example
   /** @type {[Number, String, Number]} */

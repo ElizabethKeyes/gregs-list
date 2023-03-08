@@ -22,9 +22,10 @@ export class House {
       <div class="card elevation-2 mb-4">
         <img
           src="${this.imgURL}"
-          alt="${this.bedrooms}-${this.bathrooms}" class="my-card-imgs">
+          class="my-card-imgs">
         <div class="p-2">
-          <h5 class="text-center border-bottom border-dark">${this.sqft} Sq. ft. | Built in ${this.year}</h5>
+          <h5 class="text-center border-bottom border-dark pb-2">${this.sqft} Sq. ft. | Built in ${this.year}</h5>
+          <p>${this.bedrooms} Bedrooms | ${this.bathrooms} Bathrooms
           <p>${this.description}</p>
           <p class="text-end">$${this.price}</p>
           <button class="btn btn-outline-danger" title="delete listing" onclick="app.housesController.deleteHouse('${this.id}')"><i class="mdi mdi-delete" ></i></button>
