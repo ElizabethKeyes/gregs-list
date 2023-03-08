@@ -16,7 +16,7 @@ export class Car {
   get CarCard() {
     return `
     <div class="col-6 col-md-4">
-      <div class="card elevation-2 text-light fw-bold text-shadow" style="background-image: url(${this.img})">
+      <div class="card elevation-2">
         <img
           src="${this.img}"
           alt="${this.make}-${this.model}">
@@ -25,7 +25,7 @@ export class Car {
           <div class="color px-5 rounded" style="background: ${this.color}" >🎨</div>
           <p>${this.description}</p>
           <p class="text-end">🍔${this.price}</p>
-          <button class="btn btn-outline-danger" title="delete car" onclick="app.carsController.deleteCar('${this.id}')"><i class="mdi mdi-delete" ></i></button>
+          <button class="btn btn-outline-danger" title="delete listing" onclick="app.carsController.deleteCar('${this.id}')"><i class="mdi mdi-delete" ></i></button>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@ export class Car {
   // statics exist on the definition of the class, not on the instance
   static CarForm() {
     return ` 
-  <form onsubmit="app.carsController.createCar()" class="row bg-white rounded elevation-2 p-4">
+  <form onsubmit="app.carsController.createCar()" class="row bg-white rounded elevation-2 p-4 my-4">
     <h3>List a Car</h3>
     <div class="mb-2 col-4">
       <label for="make">Make</label>
