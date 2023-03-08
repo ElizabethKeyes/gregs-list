@@ -5,36 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="icon" href="assets\img\gregslist-favicon.svg">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
     integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>gregslist</title>
+  <title>Greg's List</title>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">gregslist</span>
+        <img src="assets\img\gregslist-favicon.svg" height="55" alt="" loading="lazy">
+        <span class="ms-2">Greg's List</span>
       </a>
-      <div class="btn px-3 py-2 rounded fs-3" onclick="app.carsController.showCars()">🚗</div>
-      <div class="btn px-3 py-2 rounded fs-3" onclick="app.housesController.showHouses()">🏠</div>
+      <div class="btn px-3 py-2 rounded fs-6 text-light" onclick="app.carsController.showCars()">View Cars</div>
+      <div class="btn px-3 py-2 rounded fs-6 text-light" onclick="app.housesController.showHouses()">View Houses</div>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
-      <!-- SECTION car form -->
+
       <section class="row justify-content-center">
         <div id="form" class="col-12 col-md-8">
           <!-- NOTE label labels the input, for points to the input's id so they are tied, name makes the input grab-able in js -->
 
-          <!-- THIS IS THE HOUSE FORM -->
+          <!-- SECTION House Form -->
+          <!-- #region -->
           <!-- <form onsubmit="app.housesController.createHouse()" class="row bg-white rounded elevation-2 p-4 my-4">
             <h3>List a House</h3>
             <div class="mb-2 col-4">
@@ -70,8 +70,10 @@
               <button class="btn btn-primary">Submit</button>
             </div>
           </form> -->
+          <!-- #endregion -->
 
-          <!-- THIS IS THE CARS FORM -->
+          <!-- SECTION Cars Form -->
+          <!-- #region -->
           <!-- <form onsubmit="app.carsController.createCar()" class="row bg-white rounded elevation-2 p-4">
             <h3>List a Car</h3>
             <div class="mb-2 col-4">
@@ -111,6 +113,7 @@
             </div>
           </form> -->
           <!-- NOTE all buttons ⬆️ are type submit by default so if you dont want this button to submit the form, you must change the type -->
+          <!-- #endregion -->
 
         </div>
       </section>
@@ -118,7 +121,8 @@
       <!-- SECTION car listings -->
       <section id="listings" class="row g-2">
 
-        <!-- car tempalte -->
+        <!-- SECTION Car Card Template -->
+        <!-- #region -->
         <!-- <div class="col-6 col-md-4">
           <div class="card elevation-2">
             <img
@@ -132,7 +136,7 @@
             </div>
           </div>
         </div> -->
-        <!--  -->
+        <!-- #endregion -->
 
       </section>
     </div>

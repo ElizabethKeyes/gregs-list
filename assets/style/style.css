@@ -1,1 +1,6 @@
 /* BASIC STYLES HERE */
+.my-card-imgs {
+  object-fit: cover;
+  object-position: center;
+  height: 35vh;
+}

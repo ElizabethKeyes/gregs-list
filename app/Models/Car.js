@@ -16,10 +16,10 @@ export class Car {
   get CarCard() {
     return `
     <div class="col-6 col-md-4">
-      <div class="card elevation-2">
+      <div class="card elevation-2 mb-4">
         <img
           src="${this.img}"
-          alt="${this.make}-${this.model}" class="rounded">
+          alt="${this.make}-${this.model}" class="my-card-imgs">
         <div class="p-2">
           <h5 class="text-center border-bottom border-dark">${this.make} | ${this.model} | ${this.year}</h5>
           <div class="color px-5 rounded" style="background: ${this.color}" >🎨</div>

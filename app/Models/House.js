@@ -19,10 +19,10 @@ export class House {
   get HouseCard() {
     return `
     <div class="col-6 col-md-4">
-      <div class="card elevation-2">
+      <div class="card elevation-2 mb-4">
         <img
           src="${this.imgURL}"
-          alt="${this.bedrooms}-${this.bathrooms}" class="rounded">
+          alt="${this.bedrooms}-${this.bathrooms}" class="my-card-imgs">
         <div class="p-2">
           <h5 class="text-center border-bottom border-dark">${this.sqft} Sq. ft. | Built in ${this.year}</h5>
           <p>${this.description}</p>
